@@ -1,5 +1,4 @@
 #include "Tools.h"
-
 GLFWwindow* Tools::InitAndCreateWindow()
 {
 		glfwInit();
@@ -12,20 +11,6 @@ GLFWwindow* Tools::InitAndCreateWindow()
 			std::cout << "Failed to create GLFW window" << std::endl;
 			glfwTerminate();
 			return nullptr;
-		}
-		glfwMakeContextCurrent(window);
-		//¼ÓÔØopenglº¯ÊýµØÖ·
-	    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-		{
-			std::cout << "Failed to initialize GLAD" << std::endl;
-			return nullptr;
-		}
-		glViewport(0, 0, 800, 600);
-		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-		while (!glfwWindowShouldClose(window))
-		{
-			glfwSwapBuffers(window);
-			glfwPollEvents();
 		}
 	return window;
 }
