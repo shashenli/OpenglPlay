@@ -24,7 +24,7 @@ GraphicRenderPipeLine::GraphicRenderPipeLine()
 		glfwMakeContextCurrent(window_handle);
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
-			std::cout << "Failed to initialize GLAD" << std::endl;
+			cout << "Failed to initialize GLAD" << std::endl;
 			return -1;
 		}
 		//设置窗口渲染窗口大小

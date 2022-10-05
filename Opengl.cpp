@@ -2,7 +2,7 @@
 #include "Tools.h"
 #include <iostream>
 #include<chrono>
-int main()
+int main(char argc,char** argv)
 {
 	auto PipeLine = GraphicRenderPipeLine::CreateInstance();
 	while (1)
